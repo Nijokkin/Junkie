@@ -1,0 +1,24 @@
+name: Junkie
+main: org.nijokkin.junkie.Junkie
+version: 1.0.0
+description: General commands for any Bukkit server.
+commands:
+  tp:
+    description: Teleport yourself to another player.
+    usage: /tp [player]
+    aliases: [teleport, tele]
+  tphere:
+    description: Teleport a player to yourself.
+    usage: /tphere [player]
+    aliases: [tph, teleh, telehere, teleporth, teleporthere]
+        
+permissions:
+  junkie.tp:
+    default: op
+    children:
+      junkie.tp.to: true
+      junkie.tp.here: true
+  junkie.tp.to:
+    default: op
+  junkie.tp.here:
+    default: op
